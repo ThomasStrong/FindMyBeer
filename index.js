@@ -1,4 +1,4 @@
-// geolocation, getCureentPosition() for onload? or queryselector?
+// geolocation, getCurrentPosition() for onload? or queryselector?
 
 function getLocation() {
   const response = document.getElementById("buttonResponse");
@@ -8,6 +8,18 @@ function getLocation() {
     response.innerHTML =
       "Geolocation is not supported and we will be unable to locate beer near here!";
   }
+}
+
+getLocation();
+
+function showPosition(position) {
+  const response = document.getElementById("buttonResponse");
+  response.innerHTML =
+    "Working on your location..." +
+    "Location: " +
+    position.coords.latitude +
+    " , " +
+    position.coords.longitude;
 }
 
 // getelementbyid username
