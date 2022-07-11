@@ -23,7 +23,14 @@ function showPosition(position) {
 }
 
 // getelementbyid username
-// use that for fetch() url
+
+const wishlistItems = async function getUserWishlist(wishlist) {
+  const untappdUser = document.getElementById(userName);
+  const fetchURL = `http://untappd.com/v4/user/wishlist/${untappdUser}`;
+
+  const userWishlist = await fetch(fetchURL);
+  // set to display wishlist
+};
 // error? handle w promise and prompt for valid username if necessary
 
 // parse json of user's wishlist? (display 1-5?)
@@ -33,6 +40,8 @@ function showPosition(position) {
 
 // user picks item, distance range, then list of venues is generated via:
 // calculate using user's location and venues via lat-long
+// for fun can show distance from the brewery:
+// "That beer was born 523 miles away!" brewery.location
 
 // if beer is found nearby, then show the available locations (5 closest?)
 // Haversine formula?
