@@ -1,3 +1,15 @@
+// geolocation, getCureentPosition() for onload? or queryselector?
+
+function getLocation() {
+  const response = document.getElementById("buttonResponse");
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    response.innerHTML =
+      "Geolocation is not supported and we will be unable to locate beer near here!";
+  }
+}
+
 // getelementbyid username
 // use that for fetch() url
 // error? handle w promise and prompt for valid username if necessary
