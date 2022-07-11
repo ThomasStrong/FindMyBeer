@@ -24,6 +24,12 @@ function showPosition(position) {
 
 // getelementbyid username
 
+// For new project flow, using beermapping.com API
+// http://beermapping.com/webservice/locquery/[API_KEY]/[piece]&s=json
+// specifically returns json data via text search
+// http://beermapping.com/webservice/loccity/API_KEY/lyons,co
+// http://beermapping.com/webservice/locstate/API_KEY/co
+
 const wishlistItems = async function getUserWishlist(wishlist) {
   const untappdUser = document.getElementById(userName);
   const testUser = "apitester";
