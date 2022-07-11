@@ -26,7 +26,11 @@ function showPosition(position) {
 
 const wishlistItems = async function getUserWishlist(wishlist) {
   const untappdUser = document.getElementById(userName);
-  const fetchURL = `http://untappd.com/v4/user/wishlist/${untappdUser}`;
+  const testUser = "apitester";
+  // Commented out for testing
+  //   const fetchURL = `http://api.untappd.com/v4/user/wishlist/${untappdUser}`;
+
+  const fetchURL = `http://api.untappd.com/v4/user/wishlist/${testUser}`;
 
   const userWishlist = await fetch(fetchURL);
   // set to display wishlist
