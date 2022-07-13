@@ -1,5 +1,3 @@
-// geolocation
-
 function getLocation() {
   const response = document.getElementById("buttonResponse");
   if (navigator.geolocation) {
@@ -12,13 +10,26 @@ function getLocation() {
 
 getLocation();
 
+let userLat;
+let userLong;
 // For testing geolocation
 //
 function showPosition(position) {
-  const userLat = position.coords.latitude;
-  const userLong = position.coords.longitude;
+  userLat = position.coords.latitude;
+  userLong = position.coords.longitude;
 
   console.log(userLat, userLong);
+
+  let map;
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: userLat, lng: userLong },
+      zoom: 8,
+    });
+  }
+
+  window.initMap = initMap;
   // const response = document.getElementById("buttonResponse");
   // response.innerHTML =
   //   "Working on your location..." +
