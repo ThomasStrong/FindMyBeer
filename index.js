@@ -41,7 +41,7 @@ function showPosition(position) {
 //   const untappdUser = document.getElementById(userName);
 //   const testUser = "apitester";
 //   // Commented out for testing
-//   //   const fetchURL = `http://api.untappd.com/v4/user/wishlist/${untappdUser}`;
+//   // const fetchURL = `http://api.untappd.com/v4/user/wishlist/${untappdUser}`;
 
 //   const fetchURL = `http://api.untappd.com/v4/user/wishlist/${testUser}`;
 
