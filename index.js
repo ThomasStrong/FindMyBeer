@@ -12,15 +12,17 @@ function getLocation() {
 
 getLocation();
 
-function showPosition(position) {
-  const response = document.getElementById("buttonResponse");
-  response.innerHTML =
-    "Working on your location..." +
-    "Location: " +
-    position.coords.latitude +
-    " , " +
-    position.coords.longitude;
-}
+// For testing geolocation
+//
+// function showPosition(position) {
+//   const response = document.getElementById("buttonResponse");
+//   response.innerHTML =
+//     "Working on your location..." +
+//     "Location: " +
+//     position.coords.latitude +
+//     " , " +
+//     position.coords.longitude;
+// }
 
 // getelementbyid username
 
@@ -30,17 +32,19 @@ function showPosition(position) {
 // http://beermapping.com/webservice/loccity/API_KEY/lyons,co
 // http://beermapping.com/webservice/locstate/API_KEY/co
 
-const wishlistItems = async function getUserWishlist(wishlist) {
-  const untappdUser = document.getElementById(userName);
-  const testUser = "apitester";
-  // Commented out for testing
-  //   const fetchURL = `http://api.untappd.com/v4/user/wishlist/${untappdUser}`;
+// No longer viable:
+// const wishlistItems = async function getUserWishlist(wishlist) {
+//   const untappdUser = document.getElementById(userName);
+//   const testUser = "apitester";
+//   // Commented out for testing
+//   //   const fetchURL = `http://api.untappd.com/v4/user/wishlist/${untappdUser}`;
 
-  const fetchURL = `http://api.untappd.com/v4/user/wishlist/${testUser}`;
+//   const fetchURL = `http://api.untappd.com/v4/user/wishlist/${testUser}`;
 
-  const userWishlist = await fetch(fetchURL);
-  // set to display wishlist
-};
+//   const userWishlist = await fetch(fetchURL);
+//   // set to display wishlist
+// };
+
 // error? handle w promise and prompt for valid username if necessary
 
 // parse json of user's wishlist? (display 1-5?)
