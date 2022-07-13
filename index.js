@@ -1,12 +1,12 @@
-// geolocation, getCurrentPosition() for onload? or queryselector?
+// geolocation
 
 function getLocation() {
   const response = document.getElementById("buttonResponse");
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    userPosition = navigator.geolocation.getCurrentPosition(showPosition);
   } else {
     response.innerHTML =
-      "Geolocation is not supported and we will be unable to locate beer near here!";
+      "Geolocation is not supported and we will be unable to locate beer near your location!";
   }
 }
 
@@ -14,15 +14,19 @@ getLocation();
 
 // For testing geolocation
 //
-// function showPosition(position) {
-//   const response = document.getElementById("buttonResponse");
-//   response.innerHTML =
-//     "Working on your location..." +
-//     "Location: " +
-//     position.coords.latitude +
-//     " , " +
-//     position.coords.longitude;
-// }
+function showPosition(position) {
+  const userLat = position.coords.latitude;
+  const userLong = position.coords.longitude;
+
+  console.log(userLat, userLong);
+  // const response = document.getElementById("buttonResponse");
+  // response.innerHTML =
+  //   "Working on your location..." +
+  //   "Location: " +
+  //   position.coords.latitude +
+  //   " , " +
+  //   position.coords.longitude;
+}
 
 // getelementbyid username
 
